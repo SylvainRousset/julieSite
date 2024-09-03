@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/SylvainRousset/patisserie-en-ligne/static/css/main.342bd28e.css",
+    "main.js": "/SylvainRousset/patisserie-en-ligne/static/js/main.3fb9d414.js",
+    "static/media/locaux2.jpg": "/SylvainRousset/patisserie-en-ligne/static/media/locaux2.cdab678a231850aec57b.jpg",
+    "static/media/locaux3.jpg": "/SylvainRousset/patisserie-en-ligne/static/media/locaux3.a95475ff528e23771200.jpg",
+    "static/media/logo5.png": "/SylvainRousset/patisserie-en-ligne/static/media/logo5.70703b8c7952526f341b.png",
+    "static/media/slick.svg": "/SylvainRousset/patisserie-en-ligne/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/SylvainRousset/patisserie-en-ligne/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/SylvainRousset/patisserie-en-ligne/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/SylvainRousset/patisserie-en-ligne/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/SylvainRousset/patisserie-en-ligne/index.html",
+    "main.342bd28e.css.map": "/SylvainRousset/patisserie-en-ligne/static/css/main.342bd28e.css.map",
+    "main.3fb9d414.js.map": "/SylvainRousset/patisserie-en-ligne/static/js/main.3fb9d414.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.342bd28e.css",
+    "static/js/main.3fb9d414.js"
+  ]
+}
