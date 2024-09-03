@@ -1,0 +1,167 @@
+@import 'variables';
+
+.home {
+  &__hero {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: lighten($primary-color, 5%);
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    color: $secondary-color;
+    margin-bottom: 2rem;
+  }
+
+  &__about,
+  &__featured,
+  &__cta {
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+
+  &__about {
+    background-color: $primary-color;
+    
+    h2 {
+      color: $secondary-color;
+      margin-bottom: 1rem;
+      font-family: BauerBodoniBT-Roman - 400;
+    }
+
+    p {
+      max-width: 600px;
+      margin: 0 auto;
+      color: $text-color;
+    }
+  }
+
+  &__featured {
+    background-color: lighten($primary-color, 3%);
+
+    h2 {
+      color: $secondary-color;
+      margin-bottom: 2rem;
+    }
+
+    // Ici, vous pouvez ajouter des styles pour votre grille de produits vedettes
+  }
+
+  &__cta {
+    background-color: $secondary-color;
+    color: $primary-color;
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin-bottom: 2rem;
+    }
+
+    &-button {
+      background-color: $primary-color;
+      color: $secondary-color;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+  }
+
+  .pastries-section,
+  .pieces-montees-section,
+  .local-section {
+    margin-top: 0px;
+    padding: 30px 0;
+
+    .section-title {
+      text-align: left;
+      margin-left: 100px;
+      font-family: BauerBodoniBT-Roman - 400;
+      color: rgb(85, 85, 85);
+      font-weight: 400;
+      margin-bottom: 30px;
+
+      span {
+        display: block;
+        font-size: 36px;
+        line-height: 1.2;
+
+        &:first-child {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+
+  // Styles spécifiques pour chaque section
+  .pastries-section {
+    background-color: #f3f3f3; // Beige clair
+
+  }
+
+  .pieces-montees-section {
+    background-color: #E6EDF5; // Bleu très clair
+  }
+
+  .local-section {
+    margin-top: 0;
+  }
+
+  // Ajout d'une classe pour le bouton "Modifier"
+  .edit-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+
+    &:hover {
+      background-color: #2980b9;
+    }
+  }
+  // src/Styles/Home.scss
+.admin-controls {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+
+  .edit-btn,
+  .logout-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+
+  .edit-btn {
+    background-color: #3498db;
+    color: white;
+
+    &:hover {
+      background-color: #2980b9;
+    }
+  }
+
+  .logout-btn {
+    background-color: #e74c3c;
+    color: white;
+
+    &:hover {
+      background-color: #c0392b;
+    }
+  }
+}
+}

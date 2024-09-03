@@ -1,0 +1,53 @@
+.header {
+  background-color: white;
+  padding: 10px;
+  padding-left: 0;
+  position: relative;
+
+  &__content {
+    display: flex;
+    justify-content: space-between; // Espace entre le logo et les liens
+    align-items: center; // Aligne verticalement
+  }
+
+  &__logo {
+    flex: 1; // Ajuste la taille du logo et permet à la navigation de prendre le reste de l'espace
+    display: flex;
+    justify-content: start; // Centre le logo horizontalement dans son conteneur
+  margin-left: 0px;
+    &-img {
+      max-height: 80px;
+      width: auto;
+    }
+  }
+
+  &__nav {
+    flex: 2; // Permet à la navigation d'occuper plus d'espace par rapport au logo
+    display: flex;
+    justify-content: end; // Centre les liens horizontalement dans la navigation
+
+    &-list {
+      display: flex;
+      justify-content: space-around; // Distribue les liens avec de l'espace autour
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    &-link {
+      color: rgb(102, 102, 102);
+      text-transform: uppercase;
+      margin-right: 30px;
+      font-size: 14px;
+      font-family: "Open Sans", "Helvetica Neue", sans-serif;
+      font-weight: 400;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: rgb(150, 150, 150);
+      }
+    }
+  }
+}

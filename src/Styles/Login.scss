@@ -1,0 +1,68 @@
+// src/Styles/Login.scss
+
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+  
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #333;
+    }
+  
+    form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+  
+      .form-group {
+        margin-bottom: 15px;
+  
+        label {
+          display: block;
+          font-size: 1rem;
+          margin-bottom: 5px;
+          color: #333;
+        }
+  
+        input {
+          width: 100%;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          font-size: 1rem;
+          box-sizing: border-box;
+        }
+      }
+  
+      .error {
+        color: #e74c3c;
+        margin-bottom: 10px;
+        font-size: 0.875rem;
+      }
+  
+      button {
+        width: 100%;
+        padding: 10px;
+        background-color: #2ecc71;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+  
+        &:hover {
+          background-color: #27ae60;
+        }
+      }
+    }
+  }
+  
