@@ -40,7 +40,7 @@
     "server": "nodemon server/server.js",
     "dev": "concurrently \"npm run server\" \"npm start\"",
     "predeploy": "npm run build",
-    "deploy": "npm run build && gh-pages -d dist"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
