@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/julieSite/static/css/main.0aa8d4ef.css",
-    "main.js": "/julieSite/static/js/main.ebbc4e14.js",
+    "main.css": "/julieSite/static/css/main.00a79a12.css",
+    "main.js": "/julieSite/static/js/main.db75dcbe.js",
     "static/media/locaux2.jpg": "/julieSite/static/media/locaux2.cdab678a231850aec57b.jpg",
     "static/media/locaux3.jpg": "/julieSite/static/media/locaux3.a95475ff528e23771200.jpg",
     "static/media/logo5.png": "/julieSite/static/media/logo5.70703b8c7952526f341b.png",
+    "static/media/profil.png": "/julieSite/static/media/profil.7fa95651ab52f8783f17.png",
     "static/media/slick.svg": "/julieSite/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/julieSite/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/julieSite/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/julieSite/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/julieSite/index.html",
-    "main.0aa8d4ef.css.map": "/julieSite/static/css/main.0aa8d4ef.css.map",
-    "main.ebbc4e14.js.map": "/julieSite/static/js/main.ebbc4e14.js.map"
+    "main.00a79a12.css.map": "/julieSite/static/css/main.00a79a12.css.map",
+    "main.db75dcbe.js.map": "/julieSite/static/js/main.db75dcbe.js.map"
   },
   "entrypoints": [
-    "static/css/main.0aa8d4ef.css",
-    "static/js/main.ebbc4e14.js"
+    "static/css/main.00a79a12.css",
+    "static/js/main.db75dcbe.js"
   ]
 }
