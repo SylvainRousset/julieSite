@@ -9,12 +9,14 @@ function HeroCarousel({ slides }) {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 800,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 2500,
     arrows: false,  // Désactiver les flèches de navigation
+    pauseOnHover: false,  // Désactiver la pause lors du survol de la souris
+    pauseOnFocus: false,  // Désactiver la pause lors du focus (comme un clic)
   };
 
   return (

@@ -21,7 +21,7 @@ function App() {
   }, [auth]);
 
   return (
-    <Router basename="/julieSite">
+    <Router basename="/">
       <Layout>
         <Routes>
           {/* Route d'accueil */}

@@ -1,0 +1,58 @@
+.presentation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 80px;
+    background-color: #f9f9f9;
+  
+    &__image {
+      flex: 1;
+      max-width: 40%; /* L'image prend jusqu'à 40% de la largeur de l'écran */
+      margin-right: 2rem;
+  
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+    }
+  
+    &__text {
+      flex: 2;
+      max-width: 50%; /* Limite la largeur du texte à 50% de la largeur du conteneur */
+      padding-left: 2rem;
+      padding-top: 1rem;
+      margin-right: auto; /* Pour centrer davantage le texte et équilibrer avec l'image */
+  
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        color: #333;
+      }
+  
+      p {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        color: #555;
+        margin-bottom: 2rem;
+      }
+    }
+  
+    @media (max-width: 768px) {
+      flex-direction: column;
+      text-align: center;
+  
+      &__image {
+        max-width: 100%;
+        margin-bottom: 1.5rem;
+      }
+  
+      &__text {
+        max-width: 100%; /* Le texte prend 100% de la largeur sur mobile */
+        padding-left: 0;
+        padding-top: 0;
+      }
+    }
+  }
+  

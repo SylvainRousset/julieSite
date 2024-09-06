@@ -1,34 +1,56 @@
 @import 'variables';
 
 .footer {
-  background-color: #f5efe6;
+  display: flex;
+  flex-direction: column;
+  background-color: #F0F0F0;
   color: $text-color;
-  padding: 2rem 0;
+  margin-top:80px;
+  padding: 25px;
 
   &__container {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
+    width: 100%;
+    justify-content:space-between ;
   }
-
+  .footer__logo {
+    display: flex;
+    flex-direction: column; /* Permet de placer l'image sous le logo */
+    align-items: flex-start;
+    margin-left: 50px;
+    margin-bottom: 1rem;
+  
+    .footer__logo-img {
+      width: 200px; /* Taille du logo */
+      height: auto;
+    }
+  
+    .footer__image-below-logo {
+      display: flex;
+      align-items: flex-start;
+      width: 150px; /* Taille de l'image sous le logo */
+      height: auto;
+      margin-left: 50px;
+      margin-top: 20px; /* Ajoute un espace entre le logo et l'image */
+     
+    }
+  }
   &__section {
-    flex: 1;
     min-width: 250px;
     margin-bottom: 1rem;
   }
 
   &__title {
     font-size: 1.2rem;
-    margin-bottom: 1rem;
-    color: $secondary-color;
+    margin-bottom: 20px;
+    color: rgb(120, 120, 120);
   }
 
   &__address {
+    color:black;
     font-style: normal;
     line-height: 1.6;
+    font-family: museo-sans, "Century Gothic", sans-serif;
   }
 
   &__nav {
@@ -60,37 +82,47 @@
       color: $text-color;
       transition: color 0.3s ease;
 
-      &:hover {
-        color: $secondary-color;
-      }
+     
     }
 
-    &-icon {
-      width: 24px;
-      height: 24px;
-      fill: currentColor;
+  }
+  .footer__social a {
+    font-size: 36px; /* Ajustez la taille des icônes ici */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px; /* Largeur de l'icône, modifiable */
+    height: 50px; /* Hauteur de l'icône, modifiable */
+    transition: color 0.3s ease, transform 0.3s ease; /* Ajout d'une animation si nécessaire */
+    
+  }
+  .footer__address a {
+    color: #585858; /* Couleur personnalisée pour le téléphone et l'email */
+    text-decoration: none;
+    transition: color 0.3s ease;
+  
+    &:hover {
+      color: #0056b3; /* Couleur au survol */
     }
   }
-
+  
+  .footer__social a:hover {
+    color: $secondary-color;
+    transform: scale(1.1); /* Agrandir légèrement l'icône au survol */
+  }
   &__bottom {
-    border-top: 1px solid $secondary-color;
+    border-top: 1px solid #A3A3A3;
+    width: 80%;
+    margin: auto;
     margin-top: 2rem;
     padding-top: 1rem;
     text-align: center;
-
-    nav {
-      margin-top: 0.5rem;
-
-      a {
-        color: $text-color;
-        text-decoration: none;
-        margin: 0 0.5rem;
-        transition: color 0.3s ease;
-
-        &:hover {
-          color: $secondary-color;
-        }
-      }
+    &:hover {
+      color: $secondary-color;
     }
+  
+  }
+  &__bottom p ,a{
+    color: black;
   }
 }
