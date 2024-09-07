@@ -10,7 +10,7 @@ const Presentation = () => {
         <img src={portrait} alt="Portrait de la pâtissière" />
       </div>
       <div className="presentation__text">
-        <h2>À propos de notre pâtisserie</h2>
+      <h1>Julie Pâtisserie - Pâtisseries artisanales à Toulouse</h1>
         <p>
           Bienvenue chez Julie Pâtisserie, où chaque création est faite maison avec des ingrédients locaux de haute qualité. 
           Notre chef pâtissière, avec plus de 10 ans d'expérience dans diverses maisons renommées, vous propose une gamme 

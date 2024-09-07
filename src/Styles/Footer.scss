@@ -21,8 +21,9 @@
     margin-bottom: 1rem;
   
     .footer__logo-img {
-      width: 200px; /* Taille du logo */
+      width: 250px; /* Taille du logo */
       height: auto;
+      margin-bottom: 20px;
     }
   
     .footer__image-below-logo {
@@ -41,7 +42,7 @@
   }
 
   &__title {
-    font-size: 1.2rem;
+    font-size: 24px;
     margin-bottom: 20px;
     color: rgb(120, 120, 120);
   }
@@ -51,6 +52,7 @@
     font-style: normal;
     line-height: 1.6;
     font-family: museo-sans, "Century Gothic", sans-serif;
+    font-size: 20px;
   }
 
   &__nav {

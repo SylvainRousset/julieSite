@@ -11,6 +11,7 @@
     font-size: 2.5rem;
     color: $secondary-color;
     margin-bottom: 2rem;
+  
   }
 
   &__about,
@@ -78,8 +79,9 @@
   .pastries-section,
   .pieces-montees-section,
   .local-section {
-    margin: 40px 0;
+    margin: 40px 60px;
     padding: 30px 0;
+    border-radius: 15px;
 
     .section-title {
       text-align: left;
@@ -93,6 +95,7 @@
         display: block;
         font-size: 36px;
         line-height: 1.2;
+        text-transform: uppercase; /* Met le texte en majuscule */
 
         &:first-child {
           font-size: 24px;

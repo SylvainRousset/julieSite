@@ -17,7 +17,7 @@ function Footer() {
         <div className="footer__logo">
           <img src={logo} alt="Julie Pâtisserie" className="footer__logo-img" />
           {/* Image ajoutée sous le logo */}
-          <img src={imageBelowLogo} alt="Description of the image" className="footer__image-below-logo" />
+          <img src={imageBelowLogo} alt="portrait julie" className="footer__image-below-logo" />
         </div>
         
         <div className="footer__section">

@@ -2,6 +2,7 @@
   background-color: white;
   padding: 10px;
   margin-bottom: 40px;
+  margin-top: 15px;
   padding-left: 0;
   position: relative;
 
@@ -15,9 +16,9 @@
     flex: 1; // Ajuste la taille du logo et permet à la navigation de prendre le reste de l'espace
     display: flex;
     justify-content: start; // Centre le logo horizontalement dans son conteneur
-  margin-left: 0px;
+  margin-left: 60px;
     &-img {
-      max-height: 80px;
+      max-height: 100px;
       width: auto;
     }
   }
@@ -39,16 +40,34 @@
       color: rgb(102, 102, 102);
       text-transform: uppercase;
       margin-right: 30px;
-      font-size: 14px;
+      font-size: 16px;
       font-family: "Open Sans", "Helvetica Neue", sans-serif;
       font-weight: 400;
       text-decoration: none;
       padding: 0.5rem 1rem;
+      position: relative; // Important pour que le pseudo-élément soit positionné par rapport au lien
       transition: color 0.3s ease;
-
+    
+      // Création de l'effet underline via le pseudo-élément ::after
+      &::after {
+        content: '';
+        position: absolute;
+        width: 0; // La ligne commence avec une largeur de 0
+        height: 1px; // Épaisseur de la ligne (simule l'underline)
+        background-color: currentColor; // Utilise la couleur actuelle du texte
+        bottom: 0; // Position en bas du texte
+        left: 10px; // Départ à gauche
+        transition: width 0.3s ease; // Transition fluide de la largeur
+      }
+    
+      // Survol du lien
       &:hover {
         color: rgb(150, 150, 150);
+    
+        // Animation de la largeur du pseudo-élément pour créer l'effet de soulignement
+        &::after {
+          width: 80%; // La ligne s'étend sur toute la largeur du lien
+        }
       }
     }
-  }
-}
+}}

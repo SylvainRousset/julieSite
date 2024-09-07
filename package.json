@@ -31,7 +31,7 @@
     "slick-carousel": "^1.8.1",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://sylvainrousset.github.io/julieSite",
+  "homepage": ".",
 
   "scripts": {
     "start": "react-scripts start",

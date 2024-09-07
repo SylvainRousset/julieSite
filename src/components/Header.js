@@ -13,8 +13,7 @@ function Header() {
         <nav className="header__nav">
           <ul className="header__nav-list">
             <li><HashLink smooth to="/#pastries" className="header__nav-link">Pâtisserie</HashLink></li>
-            <li><HashLink smooth to="/#pieces-montees" className="header__nav-link">Pièce Montée</HashLink></li>
-            <li><HashLink smooth to="/#local" className="header__nav-link">Produit</HashLink></li>
+            <li><HashLink smooth to="/#party" className="header__nav-link">Pièce Montée</HashLink></li>
             <li><HashLink smooth to="/#contact" className="header__nav-link">Contact</HashLink></li>
           </ul>
         </nav>

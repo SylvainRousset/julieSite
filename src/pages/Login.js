@@ -14,7 +14,7 @@ function Login() {
     event.preventDefault();
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      window.location.href = '/';
+      window.location.href = '/julieSite/#/';
     } catch (error) {
       setError('Erreur d\'authentification : ' + error.message);
     }

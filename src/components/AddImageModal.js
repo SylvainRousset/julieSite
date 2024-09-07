@@ -11,18 +11,18 @@ function AddImageModal({ isOpen, onRequestClose, onSave }) {
   const [image, setImage] = useState(null);
   const [previewUrl, setPreviewUrl] = useState(null);
   const [ingredients, setIngredients] = useState(['']); // Pour les ingrédients
- 
- 
+
   // Réinitialiser les champs lorsque la modal est fermée
- useEffect(() => {
-  if (!isOpen) {
-    setTitle('');
-    setPrice('');
-    setImage(null);
-    setPreviewUrl(null);
-    setIngredients(['']);
-  }
-}, [isOpen]);
+  useEffect(() => {
+    if (!isOpen) {
+      setTitle('');
+      setPrice('');
+      setImage(null);
+      setPreviewUrl(null);
+      setIngredients(['']);
+    }
+  }, [isOpen]);
+
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     if (file) {
@@ -52,15 +52,15 @@ function AddImageModal({ isOpen, onRequestClose, onSave }) {
   const handleSubmit = () => {
     const filteredIngredients = ingredients.filter((ing) => ing !== ''); // Ne garder que les ingrédients non vides
     onSave({ title, price, image, ingredients: filteredIngredients });
-     // Réinitialiser les champs après l'ajout
-     setTitle('');
-     setPrice('');
-     setImage(null);
-     setPreviewUrl(null);
-     setIngredients(['']);
- 
-     onRequestClose(); // Fermer la modal après l'ajout
-    
+
+    // Réinitialiser les champs après l'ajout
+    setTitle('');
+    setPrice('');
+    setImage(null);
+    setPreviewUrl(null);
+    setIngredients(['']);
+
+    onRequestClose(); // Fermer la modal après l'ajout
   };
 
   return (
@@ -72,12 +72,23 @@ function AddImageModal({ isOpen, onRequestClose, onSave }) {
       overlayClassName="add-image-modal-overlay"
     >
       <button className="close-modal-btn" onClick={onRequestClose}>
-        <FaTimes />
+      <FaTimes />
       </button>
       <h2>Ajouter une nouvelle pâtisserie</h2>
       <div className="image-upload">
         <label htmlFor="image-upload-input">
-          <FaPlus className="image-upload-icon" />
+          {/* Si l'image est présente, elle est cliquable pour la changer */}
+          {previewUrl ? (
+            <img
+              src={previewUrl}
+              alt="Prévisualisation"
+              className="image-preview"
+              onClick={() => document.getElementById('image-upload-input').click()} // Permet de cliquer sur l'image pour la changer
+              style={{ cursor: 'pointer' }} // Ajoute un curseur de type "main" pour indiquer que l'image est cliquable
+            />
+          ) : (
+            <FaPlus className="image-upload-icon" />
+          )}
           <input
             id="image-upload-input"
             type="file"
@@ -86,8 +97,8 @@ function AddImageModal({ isOpen, onRequestClose, onSave }) {
             style={{ display: 'none' }}
           />
         </label>
-        {previewUrl && <img src={previewUrl} alt="Prévisualisation" className="image-preview" />}
       </div>
+
       <input
         type="text"
         placeholder="Titre"

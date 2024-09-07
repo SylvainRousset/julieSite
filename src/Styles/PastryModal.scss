@@ -1,60 +1,114 @@
-.pastry-modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.75);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .pastry-modal {
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 8px;
-    max-width: 600px;
-    width: 100%;
-    text-align: center;
-  }
-  
-  .modal-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
-  
-  .modal-ingredients {
-    margin-top: 2rem;
-  }
-  
-  .modal-ingredients h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .modal-ingredients ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .modal-ingredients li {
-    margin-bottom: 0.5rem;
-  }
-  
-  .modal-close-btn {
-    margin-top: 2rem;
-    padding: 0.5rem 1.5rem;
-    background-color: #007bff;
-    color: #fff;
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+.pastry-modal {
+  background: #F0F0F0;
+  padding: 30px; /* Augmente le padding pour plus d'espace autour du contenu */
+  border-radius: 8px;
+  max-width: 1000px; /* Augmente la largeur maximale de la modal */
+  max-height: 90vh;
+  width: auto;
+  margin: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  overflow: hidden;
+
+  .close-modal-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
     border: none;
-    border-radius: 4px;
+    font-size: 28px; /* Augmente la taille de la croix de fermeture */
     cursor: pointer;
-    font-size: 1rem;
+    color: #333;
+
+    &:hover {
+      color: #e74c3c;
+    }
   }
-  
-  .modal-close-btn:hover {
-    background-color: #0056b3;
+
+  .modal-title {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 400;
+    font-size: 48px; /* Augmente la taille du titre */
   }
-  
+
+  .separator {
+    width: 60%; /* Augmente la largeur du trait */
+    height: 3px; /* Augmente l'épaisseur du trait */
+    background-color: #ccc;
+    margin: 15px auto;
+  }
+
+  .modal-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px; /* Augmente l'espacement entre l'image et le texte */
+    overflow: auto;
+    max-height: calc(90vh - 100px);
+
+    .image-container {
+      flex: 1;
+      max-width: 500px; /* Augmente la taille maximale de l'image */
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 8px;
+        max-height: 500px; /* Augmente la taille maximale de l'image */
+      }
+    }
+
+    .details-container {
+      flex: 2;
+      overflow-y: auto;
+      padding-left: 20px;
+
+      .ingredients-title {
+        text-align: left;
+        font-size: 30px; /* Augmente la taille du titre des ingrédients */
+
+        margin-bottom: 15px;
+        font-family: "Open Sans", "Helvetica Neue", sans-serif;
+        font-weight: 400;
+      }
+
+      .details-table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: left;
+
+        td ul {
+          list-style-type: disc;
+          margin-left: 20px;
+          font-size: 24px; /* Augmente la taille des éléments de la liste */
+          font-family: 'Lato', sans-serif; /* Applique la police Lato */
+          line-height: 1.6; /* Améliore la lisibilité en ajustant l'espacement vertical */
+          margin-top: 0;
+          
+        }
+
+        td ul li {
+          margin-bottom: 10px; /* Augmente l'espacement entre les éléments de la liste */
+        }
+      }
+    }
+  }
+}
+
+.pastry-modal-overlay {
+  background-color: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+}
