@@ -15,6 +15,8 @@
     
     @media (max-width: 768px) {
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
   }
   .footer__logo {
@@ -28,6 +30,10 @@
       width: 250px; /* Taille du logo */
       height: auto;
       margin-bottom: 20px;
+
+      @media (max-width: 1080px) {
+        width: 180px;
+      }
     }
   
     .footer__image-below-logo {
@@ -37,18 +43,43 @@
       height: auto;
       margin-left: 50px;
       margin-top: 20px; /* Ajoute un espace entre le logo et l'image */
+      border-radius: 10px;
+      
+
+   
+      @media (max-width: 1080px) {
+        width: 100px;
+        margin-left: 0;
+      }
+      @media (max-width: 768px) {
+        margin-left: 0;
+      
+        width: 200px;
+      }
      
+    }
+    @media (max-width: 768px) {
+      align-items: center;
+      width: 100%;
+      margin-left: 0;
     }
   }
   &__section {
     min-width: 250px;
     margin-bottom: 1rem;
+    @media (max-width: 1080px) {
+      margin-left: 40px;
+    }
   }
 
   &__title {
     font-size: 24px;
     margin-bottom: 20px;
     color: rgb(120, 120, 120);
+
+    @media (max-width: 1080px) {
+      font-size: 22px;
+    }
   }
 
   &__address {
@@ -57,6 +88,12 @@
     line-height: 1.6;
     font-family: museo-sans, "Century Gothic", sans-serif;
     font-size: 20px;
+    @media (max-width: 1080px) {
+      font-size: 16pxpx;
+    }
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
   }
 
   &__nav {
@@ -100,6 +137,9 @@
     width: 50px; /* Largeur de l'icône, modifiable */
     height: 50px; /* Hauteur de l'icône, modifiable */
     transition: color 0.3s ease, transform 0.3s ease; /* Ajout d'une animation si nécessaire */
+    @media (max-width: 1080px) {
+      font-size: 28px;
+    }
     
   }
   .footer__address a {
@@ -110,6 +150,10 @@
     &:hover {
       color: #0056b3; /* Couleur au survol */
     }
+    @media (max-width: 768px) {
+      text-align: center; /* Centrer le texte sous l'image */
+    }
+    
   }
   
   .footer__social a:hover {
