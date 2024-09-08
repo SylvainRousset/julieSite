@@ -75,12 +75,14 @@
   }
   // src/Styles/Home.scss
 .admin-controls {
-  margin-top: 20px;
   display: flex;
-  justify-content: space-between;
+  margin-top: 20px;
+  justify-content: center;
+  
 
   .edit-btn,
   .logout-btn {
+    margin: 0 50px;
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
@@ -89,21 +91,13 @@
     transition: background-color 0.3s ease;
   }
 
-  .edit-btn {
-    background-color: #3498db;
+  .edit-btn,
+  .logout-btn {
+    background-color: black;
     color: white;
 
     &:hover {
       background-color: #2980b9;
-    }
-  }
-
-  .logout-btn {
-    background-color: #e74c3c;
-    color: white;
-
-    &:hover {
-      background-color: #c0392b;
     }
   }
 }
@@ -113,10 +107,6 @@
 
 .pastry-carousel {
   
-
- 
-
-
   .pastry-item {
     width: 100%;
     background-color: #fff;
@@ -125,12 +115,6 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
    
-
-
-
-    
-
-
     img {
       max-width: 100%;
       width: 100%; // Prend toute la largeur du parent

@@ -12,11 +12,14 @@
     display: flex;
     width: 100%;
     justify-content:space-between ;
+    gap: 50px;
+    
     
     @media (max-width: 768px) {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      gap: 20px;
     }
   }
   .footer__logo {
@@ -67,9 +70,12 @@
   &__section {
     min-width: 250px;
     margin-bottom: 1rem;
-    @media (max-width: 1080px) {
-      margin-left: 40px;
+    align-items: center;
+    @media (max-width: 768px) {
+      text-align: center; /* Centrer le texte */
+      margin-bottom: 0; /* Ajouter de l'espace en bas des sections pour une meilleure lisibilité */
     }
+   
   }
 
   &__title {
@@ -127,7 +133,9 @@
 
      
     }
-
+    @media (max-width: 768px) {
+      justify-content: center; /* Centre les icônes sous 768px */
+    }
   }
   .footer__social a {
     font-size: 36px; /* Ajustez la taille des icônes ici */
@@ -140,7 +148,7 @@
     @media (max-width: 1080px) {
       font-size: 28px;
     }
-    
+   
   }
   .footer__address a {
     color: #585858; /* Couleur personnalisée pour le téléphone et l'email */
@@ -151,7 +159,7 @@
       color: #0056b3; /* Couleur au survol */
     }
     @media (max-width: 768px) {
-      text-align: center; /* Centrer le texte sous l'image */
+      justify-content: center; /* Centre chaque icône dans son conteneur */
     }
     
   }
@@ -174,5 +182,9 @@
   }
   &__bottom p ,a{
     color: black;
+  }
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center; /* Centre le contenu */
   }
 }
