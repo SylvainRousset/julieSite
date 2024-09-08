@@ -24,7 +24,7 @@ function PastryCarousel({ pastries }) {
   return (
     <div className="pastry-carousel">
       <Swiper
-        modules={[Navigation, Pagination]} // Ajouter la pagination et la navigation comme modules
+        modules={[Pagination]} // Ajouter la pagination et la navigation comme modules
         spaceBetween={10} // Espace entre les slides
         slidesPerView={1} // Nombre de slides visibles en même temps
         breakpoints={{
@@ -53,7 +53,7 @@ function PastryCarousel({ pastries }) {
         
         
         pagination={{ clickable: true }} // Ajouter une pagination cliquable
-        navigation // Activer la navigation avec les boutons précédent/suivant
+       
       >
         {pastries.map((pastry, index) => (
           <SwiperSlide key={index} onClick={() => openModal(pastry)}>

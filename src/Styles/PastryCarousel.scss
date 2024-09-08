@@ -106,7 +106,7 @@
 
 
 .pastry-carousel {
-  
+  padding: 0 30px ;
   .pastry-item {
     width: 100%;
     background-color: #fff;
@@ -159,23 +159,36 @@
   }
 
 
-/* Pagination dots for Swiper */
-.swiper-pagination-bullet {
-  background: #333; /* Couleur des points */
-}
 
-/* Point actif de pagination */
-.swiper-pagination-bullet-active {
-  background: #000; /* Couleur du point actif */
-}
-
-/* Déplacez les points de pagination plus bas */
-.swiper-pagination {
-  bottom: -20px; /* Ajustez cette valeur pour abaisser ou relever les points */
-}
+  
   /* Réduisez pour les smartphones en mode portrait (moins de 576px) */
 @media (max-width: 576px) {
   margin-left: 0;
   padding-left: 0;
 }
+.swiper-pagination {
+  position: relative;
+  top: -20px; /* Place la pagination au-dessus du carousel */
+  text-align: center;
+}
+
+.swiper-pagination-bullet {
+  background-color: #333;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  --swiper-pagination-bullet-horizontal-gap: 20px;
+
+  @media (max-width: 768px) {
+    --swiper-pagination-bullet-horizontal-gap: 10px;
+    width: 8px;
+  height: 8px;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #000;
+}
+
 }
