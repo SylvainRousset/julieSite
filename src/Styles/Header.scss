@@ -10,16 +10,43 @@
     display: flex;
     justify-content: space-between; // Espace entre le logo et les liens
     align-items: center; // Aligne verticalement
+    /* Réduisez pour les smartphones en mode portrait (moins de 576px) */
+  @media (max-width: 576px) {
+    flex-direction: column;
   }
-
+  }
   &__logo {
-    flex: 1; // Ajuste la taille du logo et permet à la navigation de prendre le reste de l'espace
+    flex: 1;
     display: flex;
-    justify-content: start; // Centre le logo horizontalement dans son conteneur
-  margin-left: 60px;
+    justify-content: start; // Alignement à gauche du logo
+    margin-left: 60px;
+  
     &-img {
-      max-height: 100px;
-      width: auto;
+      max-height: 100px; // Hauteur maximale par défaut
+      width: auto; // La largeur s'adapte à la hauteur pour garder les proportions
+      max-width: 100%; // S'assure que le logo ne dépasse pas la taille du conteneur
+  
+      @media (max-width: 992px) {
+        max-height: 80px; // Hauteur réduite pour les petits écrans
+        max-width: 100%; // Ajustement automatique de la largeur
+        
+      }
+  
+      @media (max-width: 768px) {
+        max-height: 60px; // Encore plus petit pour les très petits écrans
+        max-width: 100%; // S'assure que l'image reste proportionnée
+      }
+      @media (max-width: 576px) {
+        margin-bottom: 20px;
+      }
+    }
+    @media (max-width: 992px) {
+    margin-left: 40px ;
+      
+    }
+
+    @media (max-width: 768px) {
+      margin-left: 20px ;
     }
   }
 
@@ -68,6 +95,12 @@
         &::after {
           width: 80%; // La ligne s'étend sur toute la largeur du lien
         }
+      }
+      @media (max-width: 992px) {
+        font-size: 14px;
+      }
+      @media (max-width: 768px) {
+        font-size: 12px;
       }
     }
 }}

@@ -1,20 +1,135 @@
-.pastry-carousel {
-  margin: 0 auto;
-  padding: 20px;
-  max-width: 1200px;
+.pastries-section,
+  .pieces-montees-section
+   {
+    margin: 40px 60px;
+    padding: 30px 0;
+    border-radius: 15px;
 
-  .slick-slide {
-    padding: 0 15px; // Espace entre les slides
-    box-sizing: border-box;
+    .section-title {
+      text-align: left;
+      margin-left: 100px;
+      font-family: BauerBodoniBT-Roman - 400;
+      color: rgb(85, 85, 85);
+      font-weight: 400;
+      margin-bottom: 30px;
+
+      span {
+        display: block;
+        font-size: 36px;
+        line-height: 1.2;
+        text-transform: uppercase; /* Met le texte en majuscule */
+        
+        @media (max-width: 992px) {
+          font-size: 30px;
+        }
+        @media (max-width: 768px) {
+          font-size: 22px;
+        }
+
+        &:first-child {
+          font-size: 24px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        margin-bottom: 10px;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      padding: 20px 0;
+      margin: 20px 30px;
+    }
+    @media (max-width: 576px) {
+      margin: 0;
+      margin-top: 20px;
+    }
   }
 
+  // Styles spécifiques pour chaque section
+  .pastries-section {
+    background-color: #f3f3f3; // Beige clair
+
+  }
+
+  .pieces-montees-section {
+    background-color: #E6EDF5; // Bleu très clair
+  }
+
+
+
+  // Ajout d'une classe pour le bouton "Modifier"
+  .edit-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+
+    &:hover {
+      background-color: #2980b9;
+    }
+  }
+  // src/Styles/Home.scss
+.admin-controls {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+
+  .edit-btn,
+  .logout-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+
+  .edit-btn {
+    background-color: #3498db;
+    color: white;
+
+    &:hover {
+      background-color: #2980b9;
+    }
+  }
+
+  .logout-btn {
+    background-color: #e74c3c;
+    color: white;
+
+    &:hover {
+      background-color: #c0392b;
+    }
+  }
+}
+
+
+
+
+.pastry-carousel {
+  
+
+ 
+
+
   .pastry-item {
+    width: 100%;
     background-color: #fff;
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    transition: transform 0.3s ease;
+   
+
+
+
+    
+
 
     img {
       max-width: 100%;
@@ -22,6 +137,18 @@
       height: 200px; // Hauteur fixe, ajustez selon vos besoins
       object-fit: cover; // Coupe l'image pour remplir le conteneur tout en gardant les proportions
       border-radius: 8px;
+
+
+      @media (max-width: 992px) {
+        height: 150px;
+      }
+      /* Réduisez pour les tablettes en mode portrait (moins de 768px) */
+      @media (max-width: 768px) {
+        height: 120px;
+      }
+      @media (max-width: 576px) {
+       height: 100px;
+      }
     }
 
     h3 {
@@ -31,6 +158,9 @@
       font-weight: 400;
       font-style: normal;
       color: rgb(110, 98, 94);
+      @media (max-width: 992px) {
+        font-size: 16px;
+      }
     }
 
     p {
@@ -44,16 +174,24 @@
     }
   }
 
-  .slick-dots {
-    bottom: -30px;
 
-    li button:before {
-      font-size: 12px;
-      color: #333; // Couleur des points de navigation
-    }
+/* Pagination dots for Swiper */
+.swiper-pagination-bullet {
+  background: #333; /* Couleur des points */
+}
 
-    li.slick-active button:before {
-      color: #000; // Couleur du point actif
-    }
-  }
+/* Point actif de pagination */
+.swiper-pagination-bullet-active {
+  background: #000; /* Couleur du point actif */
+}
+
+/* Déplacez les points de pagination plus bas */
+.swiper-pagination {
+  bottom: -20px; /* Ajustez cette valeur pour abaisser ou relever les points */
+}
+  /* Réduisez pour les smartphones en mode portrait (moins de 576px) */
+@media (max-width: 576px) {
+  margin-left: 0;
+  padding-left: 0;
+}
 }

@@ -1,62 +1,99 @@
 .presentation {
-    display: flex;
+  display: flex;
+  align-items: flex-start; /* Aligne les éléments en haut */
+  justify-content: space-between;
+  margin: 80px 60px;
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
     align-items: center;
-    justify-content: space-between;
-   
-    margin: 80px 60px;
-    background-color: #f9f9f9;
-    border-radius: 15px;
+    justify-content: center;
+    margin: 30px 0;
+  }
 
-  
-    &__image {
-      flex: 1;
-      max-width: 40%; /* L'image prend jusqu'à 40% de la largeur de l'écran */
-      margin-right: 2rem;
-      padding-left: 15px;
-  
-      img {
-        width: 100%;
-        height: auto;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  &__image {
+    flex: 1;
+    max-width: 40%; /* L'image prend jusqu'à 40% de la largeur de l'écran */
+    margin-right: 2rem;
+    padding-left: 15px;
+    position: sticky; /* Fixe l'image en position */
+    top: 0; /* Place l'image en haut du conteneur lorsqu'on défile */
+      /* Réduisez pour les tablettes en mode portrait (moins de 768px) */
+     
+      @media (max-width: 768px) {
+        position: static; /* Réinitialise la position pour les petits écrans */
+        top: auto; /* Supprime le comportement sticky */
+        margin-bottom: 1rem;
       }
-    }
-  
-    &__text {
-      flex: 2;
-      max-width: 50%; /* Limite la largeur du texte à 50% de la largeur du conteneur */
-      padding-left: 2rem;
-      padding-top: 1rem;
-      margin-right: auto; /* Pour centrer davantage le texte et équilibrer avec l'image */
-  
-      h2 {
-        font-size: 2rem;
-        margin-bottom: 2rem;
-        color: #333;
-      }
-  
-      p {
-        font-size: 1.2rem;
-        line-height: 1.8;
-        color: #555;
-        margin-bottom: 2rem;
-      }
-    }
-  
-    @media (max-width: 768px) {
-      flex-direction: column;
-      text-align: center;
-  
-      &__image {
-        max-width: 100%;
-        margin-bottom: 1.5rem;
-      }
-  
-      &__text {
-        max-width: 100%; /* Le texte prend 100% de la largeur sur mobile */
-        padding-left: 0;
-        padding-top: 0;
-      }
+
+    img {
+      width: 100%;
+      height: auto; /* Ajuste la hauteur automatiquement pour garder les proportions */
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
   }
-  
+
+  &__text {
+    flex: 2;
+    max-width: 50%; /* Limite la largeur du texte à 50% de la largeur du conteneur */
+    padding-left: 2rem;
+    padding-top: 1rem;
+    margin-right: auto; /* Pour centrer davantage le texte et équilibrer avec l'image */
+     /* Réduisez pour les tablettes en mode portrait (moins de 768px) */
+     
+     @media (max-width: 768px) {
+      padding-right: 20px;
+      padding-left: 20px;
+      margin-right: 0;
+      text-align: center; /* Centre le texte dans le conteneur */
+      padding: 0;
+      
+     
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 2rem;
+      color: #333;
+
+      @media (max-width: 992px) {
+        font-size: 30px;
+      }
+   
+      /* Réduisez pour les tablettes en mode portrait (moins de 768px) */
+      @media (max-width: 768px) {
+        font-size: 24px;
+        margin-top: 0;
+      }
+
+      /* Réduisez pour les smartphones en mode portrait (moins de 576px) */
+      @media (max-width: 576px) {
+        font-size: 18px;
+      }
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 2rem;
+      width: 80%;
+      
+      @media (max-width: 992px) {
+        font-size: 1rem;
+      }
+        /* Réduisez pour les tablettes en mode portrait (moins de 768px) */
+        @media (max-width: 768px) {
+          font-size: 0.8rem;
+          width: 100%;
+          margin-bottom: 0.4rem;
+        }
+    }
+  }
+
+
+}
