@@ -1,7 +1,7 @@
 import React from 'react';
 import { HashLink } from 'react-router-hash-link';
 import '../Styles/Header.scss';
-import logo from '../assets/logo5.png';
+import logo from '../assets/logo_site_julie.jpg';
 
 function Header() {
   return (
